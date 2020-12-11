@@ -1,0 +1,68 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary">
+    <ion-title>
+      Comentarios de mi app
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="titulo">
+    <p>Esta fue mi app, de musica, la cual busco informacion de artistas
+      espero les haya gustado
+    </p>
+  </div>
+  <div class="comentario">
+    <p>
+      Ayudanos contestando una encuesta rapido
+    </p>
+  </div>
+<ion-list>
+
+  <ion-item>
+    <ion-label position="floating">Nombre o Usuario</ion-label>
+    <ion-input></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Artista Favorito</ion-label>
+    <ion-input></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>¿Cúal es la fecha de hoy?</ion-label>
+    <ion-label>Día-Mes-Año</ion-label>
+    <ion-datetime displayFormat="DD MM YY" placeholder="Select Date"></ion-datetime>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>¿Te agradó la app?</ion-label>
+  </ion-item>
+  
+  <ion-item>
+    <ion-label>No, esta culera</ion-label>
+    <ion-radio slot="start" value="no"></ion-radio>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Si, estuvo chida</ion-label>
+    <ion-radio slot="start" value="si"></ion-radio>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Dejanos Un comentario</ion-label>
+  </ion-item>
+
+  <ion-item>
+    <ion-textarea placeholder="Ingresa tu comentario"></ion-textarea>
+  </ion-item>
+
+  <ion-item>
+    <ion-button color="secondary" expand="block" (click)="presentToast1()">
+      Listo carnal
+    </ion-button>
+  </ion-item>
+
+</ion-list>
+
+</ion-content>

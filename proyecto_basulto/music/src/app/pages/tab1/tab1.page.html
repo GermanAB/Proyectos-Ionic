@@ -1,0 +1,34 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary">
+    <ion-title>
+      Información chingona de tu/s <br>artista/s favoritos
+      <ion-icon name="musical-notes-outline"></ion-icon>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content >
+  <br>
+<ion-header>
+  <ion-title>Aquí te mostrare información<br> chidisima de tu/s artista/s</ion-title>
+</ion-header>
+<img src="../../../assets/the-office-feat.jpg" style="width: 100%; height: 200px;">
+
+<ion-searchbar placeholder="ingresa tu album favorito" (ionChange)="buscar($event)"></ion-searchbar>
+          
+  <ion-button (click)="consultaRola()" (click)="presentToast()">enviar</ion-button>
+ 
+  
+  
+
+<ion-list *ngIf="resultado">
+  <ion-item >Tienes un gusto chingon ! x{{ this.contador }}</ion-item>
+  <ion-item *ngIf="resultado">Tu artista es: {{ resultado.artist.name }}</ion-item>
+  <ion-item>Su mbid es: {{ resultado.artist.mbid }}</ion-item>
+  <ion-item>Tu artista fue publicado por primera vez: <br>{{ resultado.artist.bio.published }}</ion-item>
+  <ion-item>Tu artista ha sido escuchado: <br>{{ resultado.artist.stats.playcount }} veces</ion-item>
+  <ion-item> Un poco de informacion de tu artista: <br>{{ resultado.artist.bio.content }}</ion-item>
+</ion-list>
+
+
+</ion-content>
